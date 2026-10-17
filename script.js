@@ -61,8 +61,8 @@ const WEDDING_CONFIG = {
 
   /* ── Music ───────────────────────────────────────────── */
   music: {
-    src:    'assets/wedding-music.mp3',
-    title:  'Gurbani & Wedding Melody',
+    src:    'assets/wedding-music.mp.mpeg',
+    title:  'Rabb Ne Banaiyan Jodiya',
     artist: 'Devotional Music',
   },
 
@@ -256,7 +256,7 @@ const TRANSLATIONS = {
     footerCredit: 'Made with ❤️ for a lifetime of love — Taranpreet & Jaspreet',
 
     // Music
-    musicTitle: 'Gurbani & Wedding Melody',
+    musicTitle: 'Rabb Ne Banaiyan Jodiya',
     musicArtist: 'Devotional Music',
 
     // WhatsApp Message
@@ -409,8 +409,8 @@ const TRANSLATIONS = {
     footerCredit: 'ਪਿਆਰ ਅਤੇ ਸਤਿਕਾਰ ਸਹਿਤ — ਤਰਨਪ੍ਰੀਤ ਅਤੇ ਜਸਪ੍ਰੀਤ',
 
     // Music
-    musicTitle: 'ਵਿਆਹ ਸ਼ਬਦ ਤੇ ਧੁਨ',
-    musicArtist: 'ਪਵਿੱਤਰ ਸੰਗੀਤ',
+    musicTitle: 'ਰੱਬ ਨੇਂ ਬਣਾਇਆਂ ਜੋੜੀਆ',
+    musicArtist: 'ਸੰਗੀਤ',
 
     // WhatsApp Message
     whatsappText: (url) =>
@@ -541,6 +541,16 @@ function applyTranslations(lang) {
   setText('btn-share-all-text', t.btnShareAllText);
   setText('btn-back-top-text', t.btnBackTopText);
   setText('footer-credit', t.footerCredit);
+
+  // Music label
+  const musicLabel = document.getElementById('music-label-display');
+  if (musicLabel) {
+    if (isMusicPlaying) {
+      musicLabel.textContent = t.musicTitle;
+    } else {
+      musicLabel.textContent = lang === 'pa' ? 'ਸੰਗੀਤ ਬੰਦ ਹੈ • ਚਲਾਓ' : 'Music Paused • Play';
+    }
+  }
 }
 
 /* ============================================================
@@ -1224,6 +1234,7 @@ function initEnvelope() {
   function handleOpen() {
     if (!envCont || envCont.classList.contains('opening')) return;
     playOpenChime();
+    playWeddingMusic();
 
     // Trigger romantic rose petal & gold confetti shower
     const sealEl = document.getElementById('env-wax-seal');
@@ -1248,6 +1259,7 @@ function initEnvelope() {
 
   if (skipBtn) {
     skipBtn.addEventListener('click', () => {
+      playWeddingMusic();
       triggerPetalShower(window.innerWidth / 2, window.innerHeight / 2);
       revealSite();
     });
@@ -1255,7 +1267,139 @@ function initEnvelope() {
 }
 
 /* ============================================================
-   H. NAVIGATION
+   H. ROYAL WEDDING MUSIC CONTROLLER
+   ============================================================ */
+let weddingAudio = null;
+let isMusicPlaying = false;
+let musicFadeInterval = null;
+
+function initMusicController() {
+  weddingAudio = document.getElementById('wedding-audio');
+  const toggleBtn = document.getElementById('btn-toggle-music');
+
+  if (!weddingAudio || !toggleBtn) return;
+
+  weddingAudio.loop = true;
+  weddingAudio.volume = 0;
+
+  // Toggle button event
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleWeddingMusic();
+  });
+
+  weddingAudio.addEventListener('play', () => {
+    isMusicPlaying = true;
+    updateMusicUI(true);
+  });
+
+  weddingAudio.addEventListener('pause', () => {
+    isMusicPlaying = false;
+    updateMusicUI(false);
+  });
+}
+
+function playWeddingMusic() {
+  if (!weddingAudio) {
+    weddingAudio = document.getElementById('wedding-audio');
+  }
+  const controller = document.getElementById('music-controller');
+  if (controller) {
+    controller.classList.add('visible');
+  }
+
+  if (!weddingAudio) return;
+
+  if (musicFadeInterval) clearInterval(musicFadeInterval);
+
+  weddingAudio.volume = 0;
+  const playPromise = weddingAudio.play();
+
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        isMusicPlaying = true;
+        updateMusicUI(true);
+
+        // Smooth volume crossfade to 0.70
+        let currentVol = 0;
+        musicFadeInterval = setInterval(() => {
+          if (currentVol < 0.7) {
+            currentVol = Math.min(0.7, currentVol + 0.05);
+            if (weddingAudio) weddingAudio.volume = currentVol;
+          } else {
+            clearInterval(musicFadeInterval);
+          }
+        }, 80);
+      })
+      .catch((err) => {
+        console.log('Audio autoplay requires interaction or was blocked:', err);
+        isMusicPlaying = false;
+        updateMusicUI(false);
+      });
+  }
+}
+
+function pauseWeddingMusic() {
+  if (!weddingAudio) return;
+  if (musicFadeInterval) clearInterval(musicFadeInterval);
+
+  let currentVol = weddingAudio.volume;
+  musicFadeInterval = setInterval(() => {
+    if (currentVol > 0.05) {
+      currentVol = Math.max(0, currentVol - 0.1);
+      if (weddingAudio) weddingAudio.volume = currentVol;
+    } else {
+      clearInterval(musicFadeInterval);
+      if (weddingAudio) {
+        weddingAudio.pause();
+        weddingAudio.volume = 0;
+      }
+      isMusicPlaying = false;
+      updateMusicUI(false);
+    }
+  }, 40);
+}
+
+function toggleWeddingMusic() {
+  if (!weddingAudio) {
+    weddingAudio = document.getElementById('wedding-audio');
+  }
+  if (!weddingAudio) return;
+
+  if (isMusicPlaying && !weddingAudio.paused) {
+    pauseWeddingMusic();
+  } else {
+    playWeddingMusic();
+  }
+}
+
+function updateMusicUI(isPlaying) {
+  const controller = document.getElementById('music-controller');
+  const toggleBtn = document.getElementById('btn-toggle-music');
+  const label = document.getElementById('music-label-display');
+  if (!controller || !toggleBtn) return;
+
+  const currentLang = document.body.getAttribute('data-lang') || 'en';
+  const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+
+  if (isPlaying) {
+    controller.classList.add('is-playing');
+    controller.classList.remove('is-paused');
+    toggleBtn.setAttribute('title', currentLang === 'pa' ? 'ਸੰਗੀਤ ਬੰਦ ਕਰੋ' : 'Pause Music');
+    toggleBtn.setAttribute('aria-label', currentLang === 'pa' ? 'ਸੰਗੀਤ ਬੰਦ ਕਰੋ' : 'Pause Music');
+    if (label) label.textContent = t.musicTitle || 'Gurbani & Wedding Melody';
+  } else {
+    controller.classList.remove('is-playing');
+    controller.classList.add('is-paused');
+    toggleBtn.setAttribute('title', currentLang === 'pa' ? 'ਸੰਗੀਤ ਚਲਾਓ' : 'Play Music');
+    toggleBtn.setAttribute('aria-label', currentLang === 'pa' ? 'ਸੰਗੀਤ ਚਲਾਓ' : 'Play Music');
+    if (label) label.textContent = currentLang === 'pa' ? 'ਸੰਗੀਤ ਬੰਦ ਹੈ • ਚਲਾਓ' : 'Music Paused • Play';
+  }
+}
+
+/* ============================================================
+   I. NAVIGATION
    ============================================================ */
 function initNav() {
   const nav       = document.getElementById('site-nav');
@@ -1693,6 +1837,7 @@ function init() {
     initLanguageToggle();
     startCountdowns();
     initEnvelope();
+    initMusicController();
     initNav();
     initRsvp();
     initWhatsApp();

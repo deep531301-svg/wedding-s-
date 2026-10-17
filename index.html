@@ -70,6 +70,28 @@
     </div>
   </aside>
 
+  <!-- ================================================
+       ROYAL WEDDING BACKGROUND MUSIC
+  ================================================ -->
+  <audio id="wedding-audio" preload="auto" loop>
+    <source src="assets/wedding-music.mp.mpeg" type="audio/mpeg" />
+  </audio>
+
+  <!-- Floating Royal Music Controller -->
+  <aside class="royal-music-controller" id="music-controller" aria-label="Wedding Music Player">
+    <button class="music-toggle-btn" id="btn-toggle-music" aria-label="Toggle wedding music" title="Toggle Wedding Melody">
+      <div class="music-disc-medallion" aria-hidden="true">
+        <span class="music-note-icon">🎵</span>
+      </div>
+      <div class="music-eq-waves" aria-hidden="true">
+        <span class="eq-wave eq-1"></span>
+        <span class="eq-wave eq-2"></span>
+        <span class="eq-wave eq-3"></span>
+      </div>
+      <span class="music-label-pill" id="music-label-display">Gurbani &amp; Wedding Melody</span>
+    </button>
+  </aside>
+
   <!-- ======================================================
        ENVELOPE / WELCOME SCREEN (Burgundy Floral Envelope)
   ====================================================== -->
