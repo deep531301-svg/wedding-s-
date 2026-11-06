@@ -1246,6 +1246,9 @@ function initEnvelope() {
     envCont.classList.add('opening');
     // After envelope animation, reveal the site smoothly
     setTimeout(revealSite, 1400);
+
+    // Auto-scroll after 3 seconds in slow speed
+    scheduleAutoScroll(3000);
   }
 
   if (openBtn) {
@@ -1262,8 +1265,153 @@ function initEnvelope() {
       playWeddingMusic();
       triggerPetalShower(window.innerWidth / 2, window.innerHeight / 2);
       revealSite();
+      scheduleAutoScroll(3000);
     });
   }
+}
+
+/* ============================================================
+   G2. GENTLE AUTOMATIC SLOW-SCROLL SYSTEM
+   ============================================================ */
+let isAutoScrolling = false;
+let autoScrollAnimId = null;
+let autoScrollTimeout = null;
+let autoScrollAccumulatedY = 0;
+let autoScrollLastTimestamp = 0;
+const AUTO_SCROLL_SPEED = 42; // pixels per second (~0.7px per 60fps frame) — slow, regal & readable
+
+function stopAutoScroll() {
+  if (autoScrollTimeout) {
+    clearTimeout(autoScrollTimeout);
+    autoScrollTimeout = null;
+  }
+  if (!isAutoScrolling) return;
+  isAutoScrolling = false;
+  if (autoScrollAnimId) {
+    cancelAnimationFrame(autoScrollAnimId);
+    autoScrollAnimId = null;
+  }
+  document.documentElement.classList.remove('is-auto-scrolling');
+  detachAutoScrollCancelListeners();
+}
+
+function handleUserScrollCancel() {
+  stopAutoScroll();
+}
+
+function handleUserScrollKeydown(e) {
+  // Cancel if navigation/scroll keys are pressed
+  const scrollKeys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Space', 'Home', 'End'];
+  if (scrollKeys.includes(e.code) || scrollKeys.includes(e.key)) {
+    stopAutoScroll();
+  }
+}
+
+function attachAutoScrollCancelListeners() {
+  // Any user interaction (touch, wheel, click, key) hands full control back to user
+  window.addEventListener('wheel', handleUserScrollCancel, { passive: true });
+  window.addEventListener('touchstart', handleUserScrollCancel, { passive: true });
+  window.addEventListener('touchmove', handleUserScrollCancel, { passive: true });
+  window.addEventListener('pointerdown', handleUserScrollCancel, { passive: true });
+  window.addEventListener('keydown', handleUserScrollKeydown, { passive: true });
+}
+
+function detachAutoScrollCancelListeners() {
+  window.removeEventListener('wheel', handleUserScrollCancel);
+  window.removeEventListener('touchstart', handleUserScrollCancel);
+  window.removeEventListener('touchmove', handleUserScrollCancel);
+  window.removeEventListener('pointerdown', handleUserScrollCancel);
+  window.removeEventListener('keydown', handleUserScrollKeydown);
+}
+
+function startAutoScroll() {
+  // Respect reduced motion accessibility setting
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  // If user has already manually scrolled down the page (> 120px), don't hijack their reading
+  if (window.scrollY > 120) {
+    return;
+  }
+
+  // Prevent duplicate runs
+  if (isAutoScrolling) return;
+  isAutoScrolling = true;
+
+  // Temporarily disable smooth scroll behavior in CSS so rAF does not fight native interpolation
+  document.documentElement.classList.add('is-auto-scrolling');
+
+  autoScrollAccumulatedY = window.scrollY;
+  autoScrollLastTimestamp = performance.now();
+
+  attachAutoScrollCancelListeners();
+
+  function autoScrollStep(currentTime) {
+    if (!isAutoScrolling) return;
+
+    const deltaMs = currentTime - autoScrollLastTimestamp;
+    autoScrollLastTimestamp = currentTime;
+
+    // Safety guard against tab switching / long frame drops
+    if (deltaMs > 0 && deltaMs < 200) {
+      autoScrollAccumulatedY += (AUTO_SCROLL_SPEED * deltaMs) / 1000;
+      window.scrollTo(0, autoScrollAccumulatedY);
+    }
+
+    // Detect if user scrolled independently (e.g. dragged desktop scrollbar thumb)
+    if (Math.abs(window.scrollY - autoScrollAccumulatedY) > 40) {
+      stopAutoScroll();
+      return;
+    }
+
+    // Check if bottom of document reached
+    const maxScroll = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight
+    ) - window.innerHeight;
+
+    if (window.scrollY >= maxScroll - 6) {
+      stopAutoScroll();
+      return;
+    }
+
+    autoScrollAnimId = requestAnimationFrame(autoScrollStep);
+  }
+
+  autoScrollAnimId = requestAnimationFrame((time) => {
+    autoScrollLastTimestamp = time;
+    autoScrollAccumulatedY = window.scrollY;
+    autoScrollAnimId = requestAnimationFrame(autoScrollStep);
+  });
+}
+
+function scheduleAutoScroll(delayMs = 3000) {
+  if (autoScrollTimeout) {
+    clearTimeout(autoScrollTimeout);
+    autoScrollTimeout = null;
+  }
+  if (isAutoScrolling) {
+    stopAutoScroll();
+  }
+
+  // Listen for user touch/scroll during the 3-second delay to cancel if they start browsing manually
+  const cancelEarlyOnInteraction = () => {
+    if (autoScrollTimeout) {
+      clearTimeout(autoScrollTimeout);
+      autoScrollTimeout = null;
+    }
+    window.removeEventListener('wheel', cancelEarlyOnInteraction);
+    window.removeEventListener('touchmove', cancelEarlyOnInteraction);
+  };
+  window.addEventListener('wheel', cancelEarlyOnInteraction, { passive: true, once: true });
+  window.addEventListener('touchmove', cancelEarlyOnInteraction, { passive: true, once: true });
+
+  autoScrollTimeout = setTimeout(() => {
+    window.removeEventListener('wheel', cancelEarlyOnInteraction);
+    window.removeEventListener('touchmove', cancelEarlyOnInteraction);
+    startAutoScroll();
+  }, delayMs);
 }
 
 /* ============================================================
@@ -1682,6 +1830,7 @@ function initBackToTop() {
   if (!btn) return;
 
   btn.addEventListener('click', () => {
+    stopAutoScroll();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }

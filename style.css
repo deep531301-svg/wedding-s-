@@ -89,6 +89,10 @@ html {
   background-color: var(--clr-cream);
 }
 
+html.is-auto-scrolling {
+  scroll-behavior: auto !important;
+}
+
 body {
   font-family: var(--font-body);
   background: linear-gradient(180deg, var(--clr-cream) 0%, var(--clr-cream) 88%, #0D0202 100%);
