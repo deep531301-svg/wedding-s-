@@ -18,46 +18,47 @@ const WEDDING_CONFIG = {
 
   /* ── Couple ─────────────────────────────────────────── */
   bride: {
-    firstName:    'Taranpreet',
+    firstName:    'Navneet',
     lastName:     'Kaur',
-    fullName:     'Taranpreet Kaur',
-    family:       'Birdi Family',
-    grandparents: 'Paternal Granddaughter of Sardarni Parminder Kaur & Late Sardar Joginder Singh Birdi',
-    parents:      'Daughter of Sardarni Jasbir Kaur & Sardar Amarjit Singh Birdi',
-    bio:          'Blessed with grace, humility, and warmth, Taranpreet carries forward the cherished heritage and noble values of the Birdi family with deep love and devotion.',
+    fullName:     'Navneet Kaur Dhillon',
+    family:       'Dhillon Family',
+    grandparents: 'Paternal Granddaughter of Sardarni Surjit Kaur & Late Sardar Mohinder Singh Dhillon',
+    parents:      'Daughter of Sardarni Harjit Kaur & Sardar Gurpreet Singh Dhillon',
+    bio:          'A reflection of grace, kindheartedness, and radiant warmth, Navneet carries forward the noble heritage and deep-rooted values of the Dhillon family with devotion and humility.',
     photo:        'assets/images/bride_portrait.png',
   },
 
   groom: {
-    firstName:    'Jaspreet',
+    firstName:    'Harpreet',
     lastName:     'Singh',
-    fullName:     'Jaspreet Singh',
-    family:       'Bhamra Family',
-    parents:      'Son of Sardarni Baljit Kaur & Late Sardar Jagjit Singh Bhamra',
-    bio:          'Grounded in Sikh values and integrity, Jaspreet embodies honor, generosity, and humility, upholding the beloved lineage of the Bhamra family.',
+    fullName:     'Harpreet Singh Sandhu',
+    family:       'Sandhu Family',
+    parents:      'Son of Sardarni Manjit Kaur & Sardar Sukhwinder Singh Sandhu',
+    bio:          'Steadfast in values, compassion, and honour, Harpreet upholds the timeless dignity and noble tradition of the Sandhu family with great pride and reverence.',
     photo:        'assets/images/groom_portrait.png',
   },
 
   couplePhoto:  'assets/images/couple_gurdwara_hero.jpg',  // Royal Sikh wedding Gurdwara hero image
 
   /* ── Wedding Date & Venue ────────────────────────────── */
-  weddingDate:  '2026-11-13T09:00:00',
+  weddingDate:  '2026-12-20T09:00:00',
 
   venue: {
-    name:           'Gurdwara Sukhmani Sahib',
-    address:        'Phase 2, Dugri,<br />Ludhiana, Punjab 141013',
-    displayDate:    'Friday, November 13, 2026',
-    displayTime:    'Baraat: 9:00 AM • Anand Karaj: 9:30 AM • Doli: 4:00 PM',
-    googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+    name:           'Gurdwara Sri Guru Tegh Bahadur Sahib',
+    address:        'Model Town,<br />Jalandhar, Punjab 144003',
+    city:           'Jalandhar',
+    displayDate:    'Sunday, December 20, 2026',
+    displayTime:    'Baraat: 9:00 AM • Anand Karaj: 10:00 AM • Doli: 3:30 PM',
+    googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
   },
 
   darshanAbhilashi: {
     title:  'With Best Compliments (ਦਰਸ਼ਨ ਅਭਿਲਾਸ਼ੀ)',
-    names:  'Birdi Family, Relatives and Friends',
-    phones: ['9056420731', '9855355731', '9815592731'],
+    names:  'Dhillon & Sandhu Families, Relatives and Friends',
+    phones: ['+91 98765-xxxxx', '+91 98140-xxxxx', '+91 94170-xxxxx'],
   },
 
-  rsvpDeadline: 'November 5, 2026',
+  rsvpDeadline: 'December 10, 2026',
 
   /* ── Music ───────────────────────────────────────────── */
   music: {
@@ -70,24 +71,24 @@ const WEDDING_CONFIG = {
   websiteUrl: window.location.href,
   get whatsappMessage() {
     return (
-      `🌸 *Wedding Invitation* 🌸\n\n` +
+      `🌸 *Royal Wedding Invitation* 🌸\n\n` +
       `ੴ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ\n` +
       `Lakh Khushian Patshahian Je Satgur Nadar Kare\n\n` +
-      `With the divine blessings of Sardarni Parminder Kaur & Late S. Joginder Singh Birdi,\n` +
-      `Sardarni Jasbir Kaur & S. Amarjit Singh Birdi cordially invite you to celebrate the Anand Karaj of their beloved daughter\n` +
+      `With the divine blessings of Sardarni Surjit Kaur & Late S. Mohinder Singh Dhillon,\n` +
+      `Sardarni Harjit Kaur & S. Gurpreet Singh Dhillon cordially invite you to celebrate the Anand Karaj of their beloved daughter\n` +
       `*${this.bride.fullName}*\n` +
       `with\n` +
       `*${this.groom.fullName}*\n` +
-      `(Son of Sardarni Baljit Kaur & Late S. Jagjit Singh Bhamra)\n\n` +
-      `📅 Day: Friday, November 13, 2026\n` +
+      `(Son of Sardarni Manjit Kaur & S. Sukhwinder Singh Sandhu)\n\n` +
+      `📅 Day: Sunday, December 20, 2026\n` +
       `⏰ Program:\n` +
       `• Swagat Baraat: 9:00 AM\n` +
-      `• Anand Karaj: 9:30 AM\n` +
-      `• Doli: 4:00 PM\n` +
-      `📍 Venue: Gurdwara Sukhmani Sahib, Phase 2, Dugri, Ludhiana, Punjab\n\n` +
-      `With Best Compliments: Birdi Family, Relatives & Friends\n` +
-      `📞 Contacts: 9056420731, 9855355731, 9815592731\n\n` +
-      `View the full interactive invitation here:\n${this.websiteUrl}`
+      `• Anand Karaj: 10:00 AM\n` +
+      `• Doli: 3:30 PM\n` +
+      `📍 Venue: Gurdwara Sri Guru Tegh Bahadur Sahib, Model Town, Jalandhar, Punjab\n\n` +
+      `With Best Compliments: Dhillon & Sandhu Families, Relatives & Friends\n` +
+      `📞 Contacts: +91 98765-xxxxx, +91 98140-xxxxx, +91 94170-xxxxx\n\n` +
+      `✨ Tap the link below to open your interactive Royal Invitation:\n${this.websiteUrl}`
     );
   },
 
@@ -96,29 +97,29 @@ const WEDDING_CONFIG = {
     {
       name:       'Swagat Baraat (Welcome of Baraat)',
       icon:       '🥁',
-      date:       'Friday, November 13, 2026',
+      date:       'Sunday, December 20, 2026',
       time:       '9:00 AM',
-      venue:      'Gurdwara Sukhmani Sahib',
-      address:    'Phase 2, Dugri, Ludhiana, Punjab',
-      mapsLink:   'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+      venue:      'Gurdwara Sri Guru Tegh Bahadur Sahib',
+      address:    'Model Town, Jalandhar, Punjab',
+      mapsLink:   'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
     },
     {
-      name:       'Anand Karaj (Sacred Laavan)',
+      name:       'Anand Karaj (Sacred Nuptial Laavan)',
       icon:       '🪯',
-      date:       'Friday, November 13, 2026',
-      time:       '9:30 AM',
-      venue:      'Gurdwara Sukhmani Sahib',
-      address:    'Phase 2, Dugri, Ludhiana, Punjab',
-      mapsLink:   'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+      date:       'Sunday, December 20, 2026',
+      time:       '10:00 AM',
+      venue:      'Gurdwara Sri Guru Tegh Bahadur Sahib',
+      address:    'Model Town, Jalandhar, Punjab',
+      mapsLink:   'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
     },
     {
-      name:       'Doli Ceremony',
+      name:       'Doli & Reception Ceremony',
       icon:       '🌸',
-      date:       'Friday, November 13, 2026',
-      time:       '4:00 PM',
-      venue:      'Gurdwara Sukhmani Sahib',
-      address:    'Phase 2, Dugri, Ludhiana, Punjab',
-      mapsLink:   'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+      date:       'Sunday, December 20, 2026',
+      time:       '3:30 PM',
+      venue:      'Gurdwara Sri Guru Tegh Bahadur Sahib',
+      address:    'Model Town, Jalandhar, Punjab',
+      mapsLink:   'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
     },
   ],
 
@@ -129,24 +130,24 @@ const WEDDING_CONFIG = {
    ============================================================ */
 const TRANSLATIONS = {
   en: {
-    pageTitle: 'Taranpreet & Jaspreet — Wedding Invitation',
-    metaDesc: 'Join us in celebrating the Anand Karaj of Taranpreet Kaur & Jaspreet Singh at Gurdwara Sukhmani Sahib, Ludhiana on Friday, November 13, 2026.',
+    pageTitle: 'Navneet & Harpreet — Royal Wedding Invitation',
+    metaDesc: 'Join us in celebrating the Anand Karaj of Navneet Kaur Dhillon & Harpreet Singh Sandhu at Gurdwara Sri Guru Tegh Bahadur Sahib, Model Town, Jalandhar on Sunday, December 20, 2026.',
     
     // Envelope
-    cardCoupleName: 'Taranpreet & Jaspreet',
+    cardCoupleName: 'Navneet & Harpreet',
     cardSubtext: 'Are getting married',
-    cardDateBadge: '13 · 11 · 2026',
+    cardDateBadge: '20 · 12 · 2026',
     openLabel: 'O P E N',
     btnSkip: 'Skip →',
 
     // Hero
     royalTogether: 'Together with their families',
-    heroBrideName: 'Taranpreet',
+    heroBrideName: 'Navneet',
     royalAmp: '&',
-    heroGroomName: 'Jaspreet',
+    heroGroomName: 'Harpreet',
     royalInvitationSub: 'Request the honour of your presence to celebrate their Anand Karaj',
-    heroWeddingDate: 'Friday, November 13, 2026',
-    heroVenue: 'Gurdwara Sukhmani Sahib • Ludhiana',
+    heroWeddingDate: 'Sunday, December 20, 2026',
+    heroVenue: 'Gurdwara Sri Guru Tegh Bahadur Sahib • Jalandhar',
     heroMessage: 'With the divine blessings of Sri Waheguru Ji and the love of our parents,<br />we cordially invite you to be part of our sacred nuptial celebration.',
     royalCountdownHeading: 'Auspicious Moment In',
     lblDays: 'Days',
@@ -161,14 +162,14 @@ const TRANSLATIONS = {
     couplePre: 'The Beloved',
     coupleTitle: 'The Couple',
     coupleBrideRole: 'The Bride',
-    coupleBrideName: 'Taranpreet Kaur',
-    coupleBrideParents: 'Daughter of Sardarni Jasbir Kaur & Sardar Amarjit Singh Birdi (Granddaughter of Sardarni Parminder Kaur & Late S. Joginder Singh Birdi)',
-    coupleBrideBio: 'Blessed with grace, humility, and warmth, Taranpreet carries forward the cherished heritage and noble values of the Birdi family with deep love and devotion.',
+    coupleBrideName: 'Navneet Kaur Dhillon',
+    coupleBrideParents: 'Daughter of Sardarni Harjit Kaur & Sardar Gurpreet Singh Dhillon (Granddaughter of Sardarni Surjit Kaur & Late S. Mohinder Singh Dhillon)',
+    coupleBrideBio: 'A reflection of grace, kindheartedness, and radiant warmth, Navneet carries forward the noble heritage and deep-rooted values of the Dhillon family with devotion and humility.',
     
     coupleGroomRole: 'The Groom',
-    coupleGroomName: 'Jaspreet Singh',
-    coupleGroomParents: 'Son of Sardarni Baljit Kaur & Late Sardar Jagjit Singh Bhamra',
-    coupleGroomBio: 'Grounded in Sikh values and integrity, Jaspreet embodies honor, generosity, and humility, upholding the beloved lineage of the Bhamra family.',
+    coupleGroomName: 'Harpreet Singh Sandhu',
+    coupleGroomParents: 'Son of Sardarni Manjit Kaur & Sardar Sukhwinder Singh Sandhu',
+    coupleGroomBio: 'Steadfast in values, compassion, and honour, Harpreet upholds the timeless dignity and noble tradition of the Sandhu family with great pride and reverence.',
 
     // Events Section
     eventsPre: 'Wedding Itinerary',
@@ -178,82 +179,82 @@ const TRANSLATIONS = {
       {
         name: 'Swagat Baraat (Welcome of Baraat)',
         icon: '🥁',
-        date: 'Friday, November 13, 2026',
+        date: 'Sunday, December 20, 2026',
         time: '9:00 AM',
-        venue: 'Gurdwara Sukhmani Sahib',
-        address: 'Phase 2, Dugri, Ludhiana, Punjab',
-        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+        venue: 'Gurdwara Sri Guru Tegh Bahadur Sahib',
+        address: 'Model Town, Jalandhar, Punjab',
+        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
       },
       {
-        name: 'Anand Karaj (Sacred Laavan)',
+        name: 'Anand Karaj (Sacred Nuptial Laavan)',
         icon: '🪯',
-        date: 'Friday, November 13, 2026',
-        time: '9:30 AM',
-        venue: 'Gurdwara Sukhmani Sahib',
-        address: 'Phase 2, Dugri, Ludhiana, Punjab',
-        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+        date: 'Sunday, December 20, 2026',
+        time: '10:00 AM',
+        venue: 'Gurdwara Sri Guru Tegh Bahadur Sahib',
+        address: 'Model Town, Jalandhar, Punjab',
+        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
       },
       {
-        name: 'Doli Ceremony',
+        name: 'Doli & Reception Ceremony',
         icon: '🌸',
-        date: 'Friday, November 13, 2026',
-        time: '4:00 PM',
-        venue: 'Gurdwara Sukhmani Sahib',
-        address: 'Phase 2, Dugri, Ludhiana, Punjab',
-        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+        date: 'Sunday, December 20, 2026',
+        time: '3:30 PM',
+        venue: 'Gurdwara Sri Guru Tegh Bahadur Sahib',
+        address: 'Model Town, Jalandhar, Punjab',
+        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
       },
     ],
 
     // Countdown Section
     countdownPre: 'The Big Day Is',
     countdownEventName: 'Almost Here!',
-    countdownDateDisplay: 'Friday, November 13, 2026 · Gurdwara Sukhmani Sahib, Ludhiana',
+    countdownDateDisplay: 'Sunday, December 20, 2026 · Gurdwara Sri Guru Tegh Bahadur Sahib, Jalandhar',
 
     // Family Blessings Section
     rsvpPre: 'Two Families, One Sacred Union',
     rsvpTitle: 'With Blessings Of',
-    namesBrideFamilyLabel: "Birdi Family (Bride's Side)",
-    namesBrideMain: 'Taranpreet Kaur',
+    namesBrideFamilyLabel: "Dhillon Family (Bride's Side)",
+    namesBrideMain: 'Navneet Kaur Dhillon',
     namesBrideGrandparentTitle: 'Paternal Grandparents',
-    namesBrideGrandparents: 'Sardarni Parminder Kaur & Late Sardar Joginder Singh Birdi',
+    namesBrideGrandparents: 'Sardarni Surjit Kaur & Late Sardar Mohinder Singh Dhillon',
     namesBrideParentTitle: 'Parents',
-    namesBrideParentsCombined: 'Sardarni Jasbir Kaur & Sardar Amarjit Singh Birdi',
+    namesBrideParentsCombined: 'Sardarni Harjit Kaur & Sardar Gurpreet Singh Dhillon',
 
-    namesGroomFamilyLabel: "Bhamra Family (Groom's Side)",
-    namesGroomMain: 'Jaspreet Singh',
+    namesGroomFamilyLabel: "Sandhu Family (Groom's Side)",
+    namesGroomMain: 'Harpreet Singh Sandhu',
     namesGroomParentTitle: 'Parents',
-    namesGroomParentsCombined: 'Sardarni Baljit Kaur & Late Sardar Jagjit Singh Bhamra',
+    namesGroomParentsCombined: 'Sardarni Manjit Kaur & Sardar Sukhwinder Singh Sandhu',
     namesHeritageBlessing: 'Waheguru Ji Mehar Karan • With Divine Blessings',
     namesBlessingText: 'ੴ ਸਤਿ ਨਾਮੁ — Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh',
 
     darshanTitle: 'With Best Compliments (ਦਰਸ਼ਨ ਅਭਿਲਾਸ਼ੀ)',
-    darshanNames: 'Birdi Family, Relatives and Friends',
+    darshanNames: 'Dhillon & Sandhu Families, Relatives and Friends',
     darshanPhoneLabel: 'Contact Numbers',
 
     // Venue Section
     venuePre: 'Sacred Nuptial Venue',
     venueTitle: 'Venue & Directions',
     venuePillBadge: 'Gurdwara Sahib • Sacred Nuptial Venue',
-    venueName: 'Gurdwara Sukhmani Sahib',
+    venueName: 'Gurdwara Sri Guru Tegh Bahadur Sahib',
     venueLocationLabel: 'Sacred Location & Address',
-    venueAddress: 'Phase 2, Dugri,<br />Ludhiana, Punjab 141013',
+    venueAddress: 'Model Town,<br />Jalandhar, Punjab 144003',
     venueScheduleLabel: 'Date & Auspicious Program',
-    venueDate: 'Friday, November 13, 2026',
-    venueTime: 'Baraat: 9:00 AM • Anand Karaj: 9:30 AM • Doli: 4:00 PM',
+    venueDate: 'Sunday, December 20, 2026',
+    venueTime: 'Baraat: 9:00 AM • Anand Karaj: 10:00 AM • Doli: 3:30 PM',
     venueMapsBtn: '📍 Get Directions',
-    venueMapsNote: 'Opens Google Maps navigation to Gurdwara Sukhmani Sahib, Dugri, Ludhiana.',
+    venueMapsNote: 'Opens Google Maps navigation to Gurdwara Sri Guru Tegh Bahadur Sahib, Model Town, Jalandhar.',
     venueMapPlaceholderTitle: 'Interactive Live Navigation',
-    venueMapPlaceholderDesc: 'Phase 2, Dugri, Ludhiana, Punjab 141013',
+    venueMapPlaceholderDesc: 'Model Town, Jalandhar, Punjab 144003',
     venueMapLink: 'Open in Google Maps ↗',
 
     // Footer
-    footerNames: 'Taranpreet & Jaspreet',
-    footerDate: '13 · 11 · 2026',
+    footerNames: 'Navneet & Harpreet',
+    footerDate: '20 · 12 · 2026',
     footerMessage: 'Thank you for being a part of our celebration. We cherish your love, blessings, and presence as we begin this beautiful journey together.',
     btnWhatsappText: 'Share on WhatsApp',
     btnShareAllText: 'Share Invitation',
     btnBackTopText: '↑ Back to Top',
-    footerCredit: 'Made with ❤️ for a lifetime of love — Taranpreet & Jaspreet',
+    footerCredit: 'Made with ❤️ for a lifetime of love — Navneet & Harpreet',
 
     // Music
     musicTitle: 'Rabb Ne Banaiyan Jodiya',
@@ -261,45 +262,45 @@ const TRANSLATIONS = {
 
     // WhatsApp Message
     whatsappText: (url) =>
-      `🌸 *Wedding Invitation* 🌸\n\n` +
+      `🌸 *Royal Wedding Invitation* 🌸\n\n` +
       `ੴ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ\n` +
       `Lakh Khushian Patshahian Je Satgur Nadar Kare\n\n` +
-      `With the divine blessings of Sardarni Parminder Kaur & Late S. Joginder Singh Birdi,\n` +
-      `Sardarni Jasbir Kaur & S. Amarjit Singh Birdi cordially invite you to celebrate the Anand Karaj of their beloved daughter\n` +
-      `*Taranpreet Kaur*\n` +
+      `With the divine blessings of Sardarni Surjit Kaur & Late S. Mohinder Singh Dhillon,\n` +
+      `Sardarni Harjit Kaur & S. Gurpreet Singh Dhillon cordially invite you to celebrate the Anand Karaj of their beloved daughter\n` +
+      `*Navneet Kaur Dhillon*\n` +
       `with\n` +
-      `*Jaspreet Singh*\n` +
-      `(Son of Sardarni Baljit Kaur & Late S. Jagjit Singh Bhamra)\n\n` +
-      `📅 Day: Friday, November 13, 2026\n` +
+      `*Harpreet Singh Sandhu*\n` +
+      `(Son of Sardarni Manjit Kaur & S. Sukhwinder Singh Sandhu)\n\n` +
+      `📅 Day: Sunday, December 20, 2026\n` +
       `⏰ Program:\n` +
       `• Swagat Baraat: 9:00 AM\n` +
-      `• Anand Karaj: 9:30 AM\n` +
-      `• Doli: 4:00 PM\n` +
-      `📍 Venue: Gurdwara Sukhmani Sahib, Phase 2, Dugri, Ludhiana, Punjab\n\n` +
-      `With Best Compliments: Birdi Family, Relatives & Friends\n` +
-      `📞 Contacts: 9056420731, 9855355731, 9815592731\n\n` +
+      `• Anand Karaj: 10:00 AM\n` +
+      `• Doli: 3:30 PM\n` +
+      `📍 Venue: Gurdwara Sri Guru Tegh Bahadur Sahib, Model Town, Jalandhar, Punjab\n\n` +
+      `With Best Compliments: Dhillon & Sandhu Families, Relatives & Friends\n` +
+      `📞 Contacts: +91 98765-xxxxx, +91 98140-xxxxx, +91 94170-xxxxx\n\n` +
       `✨ Tap the link below to open your interactive Royal Invitation:\n${url}`,
   },
 
   pa: {
-    pageTitle: 'ਤਰਨਪ੍ਰੀਤ ਅਤੇ ਜਸਪ੍ਰੀਤ — ਵਿਆਹ ਦਾ ਸੱਦਾ ਪੱਤਰ',
-    metaDesc: 'ਤਰਨਪ੍ਰੀਤ ਕੌਰ ਅਤੇ ਜਸਪ੍ਰੀਤ ਸਿੰਘ ਦੇ ਅਨੰਦ ਕਾਰਜ ਸਮਾਗਮ (ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ, ਦੁੱਗਰੀ ਫੇਸ -2, ਲੁਧਿਆਣਾ) ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਦਾ ਨਿੱਘਾ ਸੱਦਾ ਪੱਤਰ।',
+    pageTitle: 'ਨਵਨੀਤ ਅਤੇ ਹਰਪ੍ਰੀਤ — ਵਿਆਹ ਦਾ ਸ਼ਾਹੀ ਸੱਦਾ ਪੱਤਰ',
+    metaDesc: 'ਨਵਨੀਤ ਕੌਰ ਢਿੱਲੋਂ ਅਤੇ ਹਰਪ੍ਰੀਤ ਸਿੰਘ ਸੰਧੂ ਦੇ ਅਨੰਦ ਕਾਰਜ ਸਮਾਗਮ (ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ, ਮਾਡਲ ਟਾਊਨ, ਜਲੰਧਰ) ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਦਾ ਨਿੱਘਾ ਸੱਦਾ ਪੱਤਰ।',
 
     // Envelope
-    cardCoupleName: 'ਤਰਨਪ੍ਰੀਤ ਅਤੇ ਜਸਪ੍ਰੀਤ',
+    cardCoupleName: 'ਨਵਨੀਤ ਅਤੇ ਹਰਪ੍ਰੀਤ',
     cardSubtext: 'ਵਿਆਹ ਦੇ ਪਵਿੱਤਰ ਬੰਧਨ ਵਿੱਚ ਬੱਝਣ ਜਾ ਰਹੇ ਹਨ',
-    cardDateBadge: '੧੩ · ੧੧ · ੨੦੨੬',
+    cardDateBadge: '੨੦ · ੧੨ · ੨੦੨੬',
     openLabel: 'ਖੋਲ੍ਹੋ',
     btnSkip: 'ਅੱਗੇ ਵਧੋ →',
 
     // Hero
     royalTogether: 'ਸਮੂਹ ਪਰਿਵਾਰ ਵੱਲੋਂ ਸੱਦਾ',
-    heroBrideName: 'ਤਰਨਪ੍ਰੀਤ',
+    heroBrideName: 'ਨਵਨੀਤ',
     royalAmp: 'ਸੰਗ',
-    heroGroomName: 'ਜਸਪ੍ਰੀਤ',
+    heroGroomName: 'ਹਰਪ੍ਰੀਤ',
     royalInvitationSub: "ਆਪਣੇ ਅਨੰਦ ਕਾਰਜ ਦੇ ਸ਼ੁਭ ਅਵਸਰ 'ਤੇ ਆਪ ਜੀ ਦੇ ਦਰਸ਼ਨ-ਦੀਦਾਰਿਆਂ ਦੀ ਨਿਮਰਤਾ ਸਹਿਤ ਉਡੀਕ ਕਰਦੇ ਹਨ",
-    heroWeddingDate: 'ਸ਼ੁੱਕਰਵਾਰ, 13 ਨਵੰਬਰ 2026',
-    heroVenue: 'ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ • ਦੁੱਗਰੀ, ਲੁਧਿਆਣਾ',
+    heroWeddingDate: 'ਐਤਵਾਰ, 20 ਦਸੰਬਰ 2026',
+    heroVenue: 'ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ • ਮਾਡਲ ਟਾਊਨ, ਜਲੰਧਰ',
     heroMessage: "ੴ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ<br />ਲਖ ਖੁਸੀਆ ਪਾਤਿਸਾਹੀਆ ਜੇ ਸਤਿਗੁਰੁ ਨਦਰਿ ਕਰੇਇ ॥<br />ਸ੍ਰੀ ਵਾਹਿਗੁਰੂ ਜੀ ਦੀ ਅਪਾਰ ਬਖ਼ਸ਼ਿਸ਼ ਅਤੇ ਬਜ਼ੁਰਗਾਂ ਦੇ ਆਸ਼ੀਰਵਾਦ ਸਦਕਾ, ਅਸੀਂ ਆਪ ਜੀ ਨੂੰ ਇਸ ਪਵਿੱਤਰ ਅਨੰਦ ਕਾਰਜ ਸਮਾਗਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਦਾ ਨਿੱਘਾ ਸੱਦਾ ਦਿੰਦੇ ਹਾਂ।",
     royalCountdownHeading: 'ਸ਼ੁਭ ਮਹੂਰਤ ਵਿੱਚ ਬਾਕੀ ਸਮਾਂ',
     lblDays: 'ਦਿਨ',
@@ -314,14 +315,14 @@ const TRANSLATIONS = {
     couplePre: 'ਪਵਿੱਤਰ ਜੋੜੀ',
     coupleTitle: 'ਲਾੜਾ ਅਤੇ ਲਾੜੀ',
     coupleBrideRole: 'ਲਾੜੀ',
-    coupleBrideName: 'ਤਰਨਪ੍ਰੀਤ ਕੌਰ',
-    coupleBrideParents: 'ਸਰਦਾਰਨੀ ਪਰਮਿੰਦਰ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਜੋਗਿੰਦਰ ਸਿੰਘ ਬਿਰਦੀ ਦੀ ਪੋਤਰੀ, ਸਰਦਾਰਨੀ ਜਸਬੀਰ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਅਮਰਜੀਤ ਸਿੰਘ ਬਿਰਦੀ ਦੀ ਸਪੁੱਤਰੀ',
-    coupleBrideBio: 'ਸੁਚੱਜੇ ਸੰਸਕਾਰਾਂ, ਨਿਮਰਤਾ ਅਤੇ ਨਿੱਘ ਨਾਲ ਭਰਪੂਰ, ਤਰਨਪ੍ਰੀਤ ਬਿਰਦੀ ਪਰਿਵਾਰ ਦੀਆਂ ਉੱਚੀਆਂ ਕਦਰਾਂ-ਕੀਮਤਾਂ ਅਤੇ ਗੁਰਮਤਿ ਰੀਤਾਂ ਦੀ ਕਦਰਦਾਨ ਹੈ।',
+    coupleBrideName: 'ਨਵਨੀਤ ਕੌਰ ਢਿੱਲੋਂ',
+    coupleBrideParents: 'ਸਰਦਾਰਨੀ ਸੁਰਜੀਤ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਮਹਿੰਦਰ ਸਿੰਘ ਢਿੱਲੋਂ ਦੀ ਪੋਤਰੀ, ਸਰਦਾਰਨੀ ਹਰਜੀਤ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਢਿੱਲੋਂ ਦੀ ਸਪੁੱਤਰੀ',
+    coupleBrideBio: 'ਸੁਚੱਜੇ ਸੰਸਕਾਰਾਂ, ਨਿਮਰਤਾ ਅਤੇ ਨਿੱਘ ਨਾਲ ਭਰਪੂਰ, ਨਵਨੀਤ ਢਿੱਲੋਂ ਪਰਿਵਾਰ ਦੀਆਂ ਉੱਚੀਆਂ ਕਦਰਾਂ-ਕੀਮਤਾਂ ਅਤੇ ਗੁਰਮਤਿ ਰੀਤਾਂ ਦੀ ਕਦਰਦਾਨ ਹੈ।',
 
     coupleGroomRole: 'ਲਾੜਾ',
-    coupleGroomName: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',
-    coupleGroomParents: 'ਸਰਦਾਰਨੀ ਬਲਜੀਤ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਜਗਜੀਤ ਸਿੰਘ ਭੰਮਰਾ ਦੇ ਸਪੁੱਤਰ',
-    coupleGroomBio: 'ਗੁਰਸਿੱਖੀ ਜੀਵਨ ਜਾਂਚ ਅਤੇ ਦ੍ਰਿੜ੍ਹ ਇਰਾਦੇ ਵਾਲੇ ਜਸਪ੍ਰੀਤ ਭੰਮਰਾ ਪਰਿਵਾਰ ਦੇ ਮਾਣ-ਸਨਮਾਨ, ਇਮਾਨਦਾਰੀ, ਨਿਮਰਤਾ ਅਤੇ ਸੇਵਾ-ਭਾਵਨਾ ਦੇ ਪ੍ਰਤੀਕ ਹਨ।',
+    coupleGroomName: 'ਹਰਪ੍ਰੀਤ ਸਿੰਘ ਸੰਧੂ',
+    coupleGroomParents: 'ਸਰਦਾਰਨੀ ਮਨਜੀਤ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਸੁਖਵਿੰਦਰ ਸਿੰਘ ਸੰਧੂ ਦੇ ਸਪੁੱਤਰ',
+    coupleGroomBio: 'ਗੁਰਸਿੱਖੀ ਜੀਵਨ ਜਾਂਚ ਅਤੇ ਦ੍ਰਿੜ੍ਹ ਇਰਾਦੇ ਵਾਲੇ ਹਰਪ੍ਰੀਤ ਸੰਧੂ ਪਰਿਵਾਰ ਦੇ ਮਾਣ-ਸਨਮਾਨ, ਇਮਾਨਦਾਰੀ, ਨਿਮਰਤਾ ਅਤੇ ਸੇਵਾ-ਭਾਵਨਾ ਦੇ ਪ੍ਰਤੀਕ ਹਨ।',
 
     // Events Section
     eventsPre: 'ਸ਼ੁਭ ਪ੍ਰੋਗਰਾਮ',
@@ -331,82 +332,82 @@ const TRANSLATIONS = {
       {
         name: 'ਸੁਵਾਗਤ ਬਰਾਤ',
         icon: '🥁',
-        date: 'ਸ਼ੁੱਕਰਵਾਰ, 13 ਨਵੰਬਰ 2026',
+        date: 'ਐਤਵਾਰ, 20 ਦਸੰਬਰ 2026',
         time: 'ਸਵੇਰੇ 9:00 ਵਜੇ',
-        venue: 'ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ',
-        address: 'ਦੁੱਗਰੀ ਫੇਸ -2, ਲੁਧਿਆਣਾ, ਪੰਜਾਬ',
-        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+        venue: 'ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ',
+        address: 'ਮਾਡਲ ਟਾਊਨ, ਜਲੰਧਰ, ਪੰਜਾਬ',
+        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
       },
       {
         name: 'ਅਨੰਦ ਕਾਰਜ (ਲਾਵਾਂ)',
         icon: '🪯',
-        date: 'ਸ਼ੁੱਕਰਵਾਰ, 13 ਨਵੰਬਰ 2026',
-        time: 'ਸਵੇਰੇ 9:30 ਵਜੇ',
-        venue: 'ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ',
-        address: 'ਦੁੱਗਰੀ ਫੇਸ -2, ਲੁਧਿਆਣਾ, ਪੰਜਾਬ',
-        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+        date: 'ਐਤਵਾਰ, 20 ਦਸੰਬਰ 2026',
+        time: 'ਸਵੇਰੇ 10:00 ਵਜੇ',
+        venue: 'ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ',
+        address: 'ਮਾਡਲ ਟਾਊਨ, ਜਲੰਧਰ, ਪੰਜਾਬ',
+        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
       },
       {
-        name: 'ਡੋਲੀ ਦੀ ਰਸਮ',
+        name: 'ਡੋਲੀ ਅਤੇ ਰਿਸੈਪਸ਼ਨ',
         icon: '🌸',
-        date: 'ਸ਼ੁੱਕਰਵਾਰ, 13 ਨਵੰਬਰ 2026',
-        time: 'ਸ਼ਾਮ 4:00 ਵਜੇ',
-        venue: 'ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ',
-        address: 'ਦੁੱਗਰੀ ਫੇਸ -2, ਲੁਧਿਆਣਾ, ਪੰਜਾਬ',
-        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sukhmani+Sahib+Phase+2+Dugri+Ludhiana+Punjab',
+        date: 'ਐਤਵਾਰ, 20 ਦਸੰਬਰ 2026',
+        time: 'ਦੁਪਹਿਰ 3:30 ਵਜੇ',
+        venue: 'ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ',
+        address: 'ਮਾਡਲ ਟਾਊਨ, ਜਲੰਧਰ, ਪੰਜਾਬ',
+        mapsLink: 'https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Tegh+Bahadur+Sahib+Model+Town+Jalandhar+Punjab',
       },
     ],
 
     // Countdown Section
     countdownPre: 'ਸ਼ੁਭ ਵਿਆਹ ਦਾ ਦਿਨ',
     countdownEventName: 'ਬਹੁਤ ਨੇੜੇ ਹੈ!',
-    countdownDateDisplay: 'ਸ਼ੁੱਕਰਵਾਰ, 13 ਨਵੰਬਰ 2026 · ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ, ਲੁਧਿਆਣਾ',
+    countdownDateDisplay: 'ਐਤਵਾਰ, 20 ਦਸੰਬਰ 2026 · ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ, ਜਲੰਧਰ',
 
     // Family Blessings Section
     rsvpPre: 'ਦੋ ਪਰਿਵਾਰ, ਇੱਕ ਅਟੁੱਟ ਬੰਧਨ',
     rsvpTitle: 'ਵੱਡਿਆਂ ਦਾ ਆਸ਼ੀਰਵਾਦ',
-    namesBrideFamilyLabel: 'ਬਿਰਦੀ ਪਰਿਵਾਰ (ਲਾੜੀ ਵੱਲੋਂ)',
-    namesBrideMain: 'ਤਰਨਪ੍ਰੀਤ ਕੌਰ',
+    namesBrideFamilyLabel: 'ਢਿੱਲੋਂ ਪਰਿਵਾਰ (ਲਾੜੀ ਵੱਲੋਂ)',
+    namesBrideMain: 'ਨਵਨੀਤ ਕੌਰ ਢਿੱਲੋਂ',
     namesBrideGrandparentTitle: 'ਦਾਦਾ-ਦਾਦੀ ਜੀ',
-    namesBrideGrandparents: 'ਸਰਦਾਰਨੀ ਪਰਮਿੰਦਰ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਜੋਗਿੰਦਰ ਸਿੰਘ ਬਿਰਦੀ',
+    namesBrideGrandparents: 'ਸਰਦਾਰਨੀ ਸੁਰਜੀਤ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਮਹਿੰਦਰ ਸਿੰਘ ਢਿੱਲੋਂ',
     namesBrideParentTitle: 'ਮਾਤਾ-ਪਿਤਾ ਜੀ',
-    namesBrideParentsCombined: 'ਸਰਦਾਰਨੀ ਜਸਬੀਰ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਅਮਰਜੀਤ ਸਿੰਘ ਬਿਰਦੀ',
+    namesBrideParentsCombined: 'ਸਰਦਾਰਨੀ ਹਰਜੀਤ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਢਿੱਲੋਂ',
 
-    namesGroomFamilyLabel: 'ਭੰਮਰਾ ਪਰਿਵਾਰ (ਲਾੜੇ ਵੱਲੋਂ)',
-    namesGroomMain: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',
+    namesGroomFamilyLabel: 'ਸੰਧੂ ਪਰਿਵਾਰ (ਲਾੜੇ ਵੱਲੋਂ)',
+    namesGroomMain: 'ਹਰਪ੍ਰੀਤ ਸਿੰਘ ਸੰਧੂ',
     namesGroomParentTitle: 'ਮਾਤਾ-ਪਿਤਾ ਜੀ',
-    namesGroomParentsCombined: 'ਸਰਦਾਰਨੀ ਬਲਜੀਤ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਜਗਜੀਤ ਸਿੰਘ ਭੰਮਰਾ',
+    namesGroomParentsCombined: 'ਸਰਦਾਰਨੀ ਮਨਜੀਤ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਸੁਖਵਿੰਦਰ ਸਿੰਘ ਸੰਧੂ',
     namesHeritageBlessing: 'ਵਾਹਿਗੁਰੂ ਜੀ ਮਿਹਰ ਕਰਨ • ਸਦਾ ਸਹਾਈ',
     namesBlessingText: 'ੴ ਸਤਿ ਨਾਮੁ — ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖ਼ਾਲਸਾ, ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫ਼ਤਹਿ',
 
     darshanTitle: 'ਦਰਸ਼ਨ ਅਭਿਲਾਸ਼ੀ',
-    darshanNames: 'ਬਿਰਦੀ ਪਰਿਵਾਰ, ਰਿਸ਼ਤੇਦਾਰ ਅਤੇ ਦੋਸਤ ਮਿੱਤਰ',
+    darshanNames: 'ਢਿੱਲੋਂ ਅਤੇ ਸੰਧੂ ਪਰਿਵਾਰ, ਰਿਸ਼ਤੇਦਾਰ ਅਤੇ ਦੋਸਤ ਮਿੱਤਰ',
     darshanPhoneLabel: 'ਮੋਬਾਈਲ ਨੰਬਰ',
 
     // Venue Section
     venuePre: 'ਸਮਾਗਮ ਸਥਾਨ',
     venueTitle: 'ਸਥਾਨ ਅਤੇ ਰਸਤਾ',
     venuePillBadge: 'ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ • ਪਵਿੱਤਰ ਅਸਥਾਨ',
-    venueName: 'ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ',
+    venueName: 'ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ',
     venueLocationLabel: 'ਪਵਿੱਤਰ ਸਥਾਨ ਅਤੇ ਪਤਾ',
-    venueAddress: 'ਦੁੱਗਰੀ ਫੇਸ -2,<br />ਲੁਧਿਆਣਾ, ਪੰਜਾਬ 141013',
+    venueAddress: 'ਮਾਡਲ ਟਾਊਨ,<br />ਜਲੰਧਰ, ਪੰਜਾਬ 144003',
     venueScheduleLabel: 'ਤਾਰੀਖ਼ ਅਤੇ ਸ਼ੁਭ ਪ੍ਰੋਗਰਾਮ',
-    venueDate: 'ਸ਼ੁੱਕਰਵਾਰ, 13 ਨਵੰਬਰ 2026',
-    venueTime: 'ਸੁਵਾਗਤ ਬਰਾਤ: 9:00 ਸਵੇਰੇ • ਅਨੰਦ ਕਾਰਜ: 9:30 ਸਵੇਰੇ • ਡੋਲੀ: 4:00 ਸ਼ਾਮ',
+    venueDate: 'ਐਤਵਾਰ, 20 ਦਸੰਬਰ 2026',
+    venueTime: 'ਸੁਵਾਗਤ ਬਰਾਤ: 9:00 ਸਵੇਰੇ • ਅਨੰਦ ਕਾਰਜ: 10:00 ਸਵੇਰੇ • ਡੋਲੀ: 3:30 ਦੁਪਹਿਰ',
     venueMapsBtn: '📍 ਨਕਸ਼ਾ ਤੇ ਰਸਤਾ ਦੇਖੋ',
-    venueMapsNote: 'ਗੂਗਲ ਮੈਪਸ ਰਾਹੀਂ ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ, ਦੁੱਗਰੀ ਤੱਕ ਪਹੁੰਚਣ ਦਾ ਸਿੱਧਾ ਰਸਤਾ ਪ੍ਰਾਪਤ ਕਰੋ।',
+    venueMapsNote: 'ਗੂਗਲ ਮੈਪਸ ਰਾਹੀਂ ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ, ਮਾਡਲ ਟਾਊਨ ਤੱਕ ਪਹੁੰਚਣ ਦਾ ਸਿੱਧਾ ਰਸਤਾ ਪ੍ਰਾਪਤ ਕਰੋ।',
     venueMapPlaceholderTitle: 'ਲਾਈਵ ਇੰਟਰਐਕਟਿਵ ਨਕਸ਼ਾ',
-    venueMapPlaceholderDesc: 'ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ, ਦੁੱਗਰੀ ਫੇਸ -2, ਲੁਧਿਆਣਾ, ਪੰਜਾਬ',
+    venueMapPlaceholderDesc: 'ਮਾਡਲ ਟਾਊਨ, ਜਲੰਧਰ, ਪੰਜਾਬ 144003',
     venueMapLink: 'ਗੂਗਲ ਮੈਪਸ ਖੋਲ੍ਹੋ ↗',
 
     // Footer
-    footerNames: 'ਤਰਨਪ੍ਰੀਤ ਅਤੇ ਜਸਪ੍ਰੀਤ',
-    footerDate: '੧੩ · ੧੧ · ੨੦੨੬',
+    footerNames: 'ਨਵਨੀਤ ਅਤੇ ਹਰਪ੍ਰੀਤ',
+    footerDate: '੨੦ · ੧੨ · ੨੦੨੬',
     footerMessage: 'ਸਾਡੀਆਂ ਖ਼ੁਸ਼ੀਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਲਈ ਆਪ ਜੀ ਦਾ ਤਹਿ ਦਿਲੋਂ ਧੰਨਵਾਦ। ਨਵੀਂ ਜ਼ਿੰਦਗੀ ਦੀ ਸ਼ੁਰੂਆਤ ਮੌਕੇ ਆਪ ਜੀ ਦਾ ਪਿਆਰ ਅਤੇ ਅਸੀਸਾਂ ਸਾਡੇ ਲਈ ਅਨਮੋਲ ਦਾਤ ਹਨ।',
     btnWhatsappText: "ਵਟਸਐਪ 'ਤੇ ਸਾਂਝਾ ਕਰੋ",
     btnShareAllText: 'ਸੱਦਾ ਪੱਤਰ ਸਾਂਝਾ ਕਰੋ',
     btnBackTopText: '↑ ਉੱਪਰ ਜਾਓ',
-    footerCredit: 'ਪਿਆਰ ਅਤੇ ਸਤਿਕਾਰ ਸਹਿਤ — ਤਰਨਪ੍ਰੀਤ ਅਤੇ ਜਸਪ੍ਰੀਤ',
+    footerCredit: 'ਪਿਆਰ ਅਤੇ ਸਤਿਕਾਰ ਸਹਿਤ — ਨਵਨੀਤ ਅਤੇ ਹਰਪ੍ਰੀਤ',
 
     // Music
     musicTitle: 'ਰੱਬ ਨੇਂ ਬਣਾਇਆਂ ਜੋੜੀਆ',
@@ -417,21 +418,21 @@ const TRANSLATIONS = {
       `🌸 *ਵਿਆਹ ਦਾ ਸ਼ਾਹੀ ਸੱਦਾ ਪੱਤਰ* 🌸\n\n` +
       `ੴ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ\n` +
       `ਲਖ ਖੁਸੀਆ ਪਾਤਿਸਾਹੀਆ ਜੇ ਸਤਿਗੁਰੁ ਨਦਰਿ ਕਰੇਇ ॥\n\n` +
-      `ਸਰਦਾਰਨੀ ਪਰਮਿੰਦਰ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਜੋਗਿੰਦਰ ਸਿੰਘ ਬਿਰਦੀ ਦੀ ਪੋਤਰੀ\n` +
-      `*ਤਰਨਪ੍ਰੀਤ ਕੌਰ*\n` +
-      `(ਸਰਦਾਰਨੀ ਜਸਬੀਰ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਅਮਰਜੀਤ ਸਿੰਘ ਬਿਰਦੀ ਦੀ ਸਪੁੱਤਰੀ)\n` +
+      `ਸਰਦਾਰਨੀ ਸੁਰਜੀਤ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਮਹਿੰਦਰ ਸਿੰਘ ਢਿੱਲੋਂ ਦੀ ਪੋਤਰੀ\n` +
+      `*ਨਵਨੀਤ ਕੌਰ ਢਿੱਲੋਂ*\n` +
+      `(ਸਰਦਾਰਨੀ ਹਰਜੀਤ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਢਿੱਲੋਂ ਦੀ ਸਪੁੱਤਰੀ)\n` +
       `ਦਾ ਸ਼ੁਭ ਅਨੰਦ ਕਾਰਜ\n` +
-      `*ਜਸਪ੍ਰੀਤ ਸਿੰਘ*\n` +
-      `(ਸਰਦਾਰਨੀ ਬਲਜੀਤ ਕੌਰ ਅਤੇ ਸਵ. ਸਰਦਾਰ ਜਗਜੀਤ ਸਿੰਘ ਭੰਮਰਾ ਦੇ ਸਪੁੱਤਰ)\n` +
+      `*ਹਰਪ੍ਰੀਤ ਸਿੰਘ ਸੰਧੂ*\n` +
+      `(ਸਰਦਾਰਨੀ ਮਨਜੀਤ ਕੌਰ ਅਤੇ ਸਰਦਾਰ ਸੁਖਵਿੰਦਰ ਸਿੰਘ ਸੰਧੂ ਦੇ ਸਪੁੱਤਰ)\n` +
       `ਨਾਲ ਹੋਣਾ ਨਿਯਤ ਹੋਇਆ ਹੈ।\n\n` +
-      `📅 ਦਿਨ: ਸ਼ੁੱਕਰਵਾਰ, 13 ਨਵੰਬਰ 2026\n` +
+      `📅 ਦਿਨ: ਐਤਵਾਰ, 20 ਦਸੰਬਰ 2026\n` +
       `⏰ ਪ੍ਰੋਗਰਾਮ ਦਾ ਵੇਰਵਾ:\n` +
       `• ਸੁਵਾਗਤ ਬਰਾਤ: ਸਵੇਰੇ 9:00 ਵਜੇ\n` +
-      `• ਅਨੰਦ ਕਾਰਜ: ਸਵੇਰੇ 9:30 ਵਜੇ\n` +
-      `• ਡੋਲੀ: ਸ਼ਾਮ 4:00 ਵਜੇ\n` +
-      `📍 ਸਥਾਨ: ਗੁਰਦੁਆਰਾ ਸੁਖਮਨੀ ਸਾਹਿਬ, ਦੁੱਗਰੀ ਫੇਸ -2, ਲੁਧਿਆਣਾ, ਪੰਜਾਬ\n\n` +
-      `ਦਰਸ਼ਨ ਅਭਿਲਾਸ਼ੀ: ਬਿਰਦੀ ਪਰਿਵਾਰ, ਰਿਸ਼ਤੇਦਾਰ ਅਤੇ ਦੋਸਤ ਮਿੱਤਰ\n` +
-      `📞 ਸੰਪਰਕ: 9056420731, 9855355731, 9815592731\n\n` +
+      `• ਅਨੰਦ ਕਾਰਜ: ਸਵੇਰੇ 10:00 ਵਜੇ\n` +
+      `• ਡੋਲੀ: ਦੁਪਹਿਰ 3:30 ਵਜੇ\n` +
+      `📍 ਸਥਾਨ: ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ, ਮਾਡਲ ਟਾਊਨ, ਜਲੰਧਰ, ਪੰਜਾਬ\n\n` +
+      `ਦਰਸ਼ਨ ਅਭਿਲਾਸ਼ੀ: ਢਿੱਲੋਂ ਅਤੇ ਸੰਧੂ ਪਰਿਵਾਰ, ਰਿਸ਼ਤੇਦਾਰ ਅਤੇ ਦੋਸਤ ਮਿੱਤਰ\n` +
+      `📞 ਸੰਪਰਕ: +91 98765-xxxxx, +91 98140-xxxxx, +91 94170-xxxxx\n\n` +
       `✨ ਪੂਰਾ ਸ਼ਾਹੀ ਸੱਦਾ ਪੱਤਰ ਦੇਖਣ ਲਈ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ:\n${url}`,
   }
 };
@@ -682,7 +683,7 @@ function populateConfig() {
   setText('hero-bride-name',    C.bride.firstName);
   setText('hero-groom-name',    C.groom.firstName);
   setText('hero-wedding-date',  C.venue.displayDate);
-  setText('hero-venue',         `${C.venue.name} • Ludhiana`);
+  setText('hero-venue',         `${C.venue.name} • ${C.venue.city || 'Jalandhar'}`);
 
   // Couple section
   document.querySelectorAll('.nav-monogram, #nav-logo .nav-monogram').forEach(el => {
@@ -704,6 +705,23 @@ function populateConfig() {
   if (C.darshanAbhilashi) {
     setText('darshan-title', C.darshanAbhilashi.title);
     setText('darshan-names', C.darshanAbhilashi.names);
+
+    // Dynamic contact chips
+    const chipsContainer = document.getElementById('contact-chips');
+    if (chipsContainer && Array.isArray(C.darshanAbhilashi.phones)) {
+      chipsContainer.innerHTML = C.darshanAbhilashi.phones.map(p => {
+        const raw = String(p).trim();
+        const formatted = raw.length === 10 ? `${raw.slice(0, 5)}-${raw.slice(5)}` : raw;
+        const cleanTel = raw.replace(/[^\d+]/g, '');
+        const href = cleanTel.length > 5 ? `href="tel:${cleanTel}"` : 'href="#" onclick="return false;"';
+        return `
+          <a ${href} class="contact-chip" aria-label="Call ${formatted}">
+            <span class="chip-icon">📞</span>
+            <span class="chip-num">${formatted}</span>
+          </a>
+        `;
+      }).join('');
+    }
   }
 
   // Couple images
@@ -734,7 +752,7 @@ function populateConfig() {
   setText('footer-date', footerDate);
 
   // Countdown date display
-  setText('countdown-date-display', `${C.venue.displayDate} · ${C.venue.name}, Ludhiana`);
+  setText('countdown-date-display', `${C.venue.displayDate} · ${C.venue.name}, ${C.venue.city || 'Jalandhar'}`);
 }
 
 /* ============================================================
@@ -1274,13 +1292,16 @@ function initEnvelope() {
    G2. GENTLE AUTOMATIC SLOW-SCROLL SYSTEM
    ============================================================ */
 let isAutoScrolling = false;
+let userHasInteracted = false;
+let isProgrammaticAutoScroll = false;
 let autoScrollAnimId = null;
 let autoScrollTimeout = null;
 let autoScrollAccumulatedY = 0;
 let autoScrollLastTimestamp = 0;
-const AUTO_SCROLL_SPEED = 42; // pixels per second (~0.7px per 60fps frame) — slow, regal & readable
+const AUTO_SCROLL_SPEED = 38; // gentle, readable slow speed (px/sec)
 
 function stopAutoScroll() {
+  userHasInteracted = true;
   if (autoScrollTimeout) {
     clearTimeout(autoScrollTimeout);
     autoScrollTimeout = null;
@@ -1291,87 +1312,64 @@ function stopAutoScroll() {
     cancelAnimationFrame(autoScrollAnimId);
     autoScrollAnimId = null;
   }
-  document.documentElement.classList.remove('is-auto-scrolling');
-  detachAutoScrollCancelListeners();
 }
 
-function handleUserScrollCancel() {
-  stopAutoScroll();
-}
-
-function handleUserScrollKeydown(e) {
-  // Cancel if navigation/scroll keys are pressed
-  const scrollKeys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Space', 'Home', 'End'];
-  if (scrollKeys.includes(e.code) || scrollKeys.includes(e.key)) {
+function handleUserInteraction() {
+  if (!isProgrammaticAutoScroll) {
     stopAutoScroll();
   }
 }
 
-function attachAutoScrollCancelListeners() {
-  // Any user interaction (touch, wheel, click, key) hands full control back to user
-  window.addEventListener('wheel', handleUserScrollCancel, { passive: true });
-  window.addEventListener('touchstart', handleUserScrollCancel, { passive: true });
-  window.addEventListener('touchmove', handleUserScrollCancel, { passive: true });
-  window.addEventListener('pointerdown', handleUserScrollCancel, { passive: true });
-  window.addEventListener('keydown', handleUserScrollKeydown, { passive: true });
-}
-
-function detachAutoScrollCancelListeners() {
-  window.removeEventListener('wheel', handleUserScrollCancel);
-  window.removeEventListener('touchstart', handleUserScrollCancel);
-  window.removeEventListener('touchmove', handleUserScrollCancel);
-  window.removeEventListener('pointerdown', handleUserScrollCancel);
-  window.removeEventListener('keydown', handleUserScrollKeydown);
-}
+// Global user interaction listeners: any manual touch, wheel, scroll or key yields 100% control to user
+window.addEventListener('wheel', handleUserInteraction, { passive: true });
+window.addEventListener('touchstart', handleUserInteraction, { passive: true });
+window.addEventListener('touchmove', handleUserInteraction, { passive: true });
+window.addEventListener('pointerdown', handleUserInteraction, { passive: true });
+window.addEventListener('mousedown', handleUserInteraction, { passive: true });
+window.addEventListener('keydown', (e) => {
+  const scrollKeys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Space', 'Home', 'End'];
+  if (scrollKeys.includes(e.code) || scrollKeys.includes(e.key)) {
+    handleUserInteraction();
+  }
+}, { passive: true });
+window.addEventListener('scroll', () => {
+  if (!isProgrammaticAutoScroll && window.scrollY > 10) {
+    userHasInteracted = true;
+    if (isAutoScrolling) stopAutoScroll();
+  }
+}, { passive: true });
 
 function startAutoScroll() {
-  // Respect reduced motion accessibility setting
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
-  // If user has already manually scrolled down the page (> 120px), don't hijack their reading
-  if (window.scrollY > 120) {
-    return;
-  }
-
-  // Prevent duplicate runs
+  if (userHasInteracted || window.scrollY > 40) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (isAutoScrolling) return;
+
   isAutoScrolling = true;
-
-  // Temporarily disable smooth scroll behavior in CSS so rAF does not fight native interpolation
-  document.documentElement.classList.add('is-auto-scrolling');
-
   autoScrollAccumulatedY = window.scrollY;
   autoScrollLastTimestamp = performance.now();
 
-  attachAutoScrollCancelListeners();
-
   function autoScrollStep(currentTime) {
-    if (!isAutoScrolling) return;
-
-    const deltaMs = currentTime - autoScrollLastTimestamp;
-    autoScrollLastTimestamp = currentTime;
-
-    // Safety guard against tab switching / long frame drops
-    if (deltaMs > 0 && deltaMs < 200) {
-      autoScrollAccumulatedY += (AUTO_SCROLL_SPEED * deltaMs) / 1000;
-      window.scrollTo(0, autoScrollAccumulatedY);
-    }
-
-    // Detect if user scrolled independently (e.g. dragged desktop scrollbar thumb)
-    if (Math.abs(window.scrollY - autoScrollAccumulatedY) > 40) {
+    if (!isAutoScrolling || userHasInteracted) {
       stopAutoScroll();
       return;
     }
 
-    // Check if bottom of document reached
+    const deltaMs = currentTime - autoScrollLastTimestamp;
+    autoScrollLastTimestamp = currentTime;
+
+    if (deltaMs > 0 && deltaMs < 200) {
+      autoScrollAccumulatedY += (AUTO_SCROLL_SPEED * deltaMs) / 1000;
+      isProgrammaticAutoScroll = true;
+      window.scrollTo(0, autoScrollAccumulatedY);
+      isProgrammaticAutoScroll = false;
+    }
+
     const maxScroll = Math.max(
       document.documentElement.scrollHeight,
       document.body.scrollHeight
     ) - window.innerHeight;
 
-    if (window.scrollY >= maxScroll - 6) {
+    if (window.scrollY >= maxScroll - 8) {
       stopAutoScroll();
       return;
     }
@@ -1387,6 +1385,7 @@ function startAutoScroll() {
 }
 
 function scheduleAutoScroll(delayMs = 3000) {
+  if (userHasInteracted) return;
   if (autoScrollTimeout) {
     clearTimeout(autoScrollTimeout);
     autoScrollTimeout = null;
@@ -1395,22 +1394,10 @@ function scheduleAutoScroll(delayMs = 3000) {
     stopAutoScroll();
   }
 
-  // Listen for user touch/scroll during the 3-second delay to cancel if they start browsing manually
-  const cancelEarlyOnInteraction = () => {
-    if (autoScrollTimeout) {
-      clearTimeout(autoScrollTimeout);
-      autoScrollTimeout = null;
-    }
-    window.removeEventListener('wheel', cancelEarlyOnInteraction);
-    window.removeEventListener('touchmove', cancelEarlyOnInteraction);
-  };
-  window.addEventListener('wheel', cancelEarlyOnInteraction, { passive: true, once: true });
-  window.addEventListener('touchmove', cancelEarlyOnInteraction, { passive: true, once: true });
-
   autoScrollTimeout = setTimeout(() => {
-    window.removeEventListener('wheel', cancelEarlyOnInteraction);
-    window.removeEventListener('touchmove', cancelEarlyOnInteraction);
-    startAutoScroll();
+    if (!userHasInteracted && window.scrollY <= 40) {
+      startAutoScroll();
+    }
   }, delayMs);
 }
 
@@ -1602,8 +1589,8 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.02,
+    rootMargin: '0px 0px 80px 0px',
   });
 
   document.querySelectorAll('.reveal-fade, .reveal-left, .reveal-right, .reveal-scale')
@@ -1825,6 +1812,22 @@ function initWhatsApp() {
 /* ============================================================
    M. BACK TO TOP
    ============================================================ */
+function initSmoothAnchorScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId.length > 1) {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          stopAutoScroll();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+}
+
 function initBackToTop() {
   const btn = document.getElementById('btn-back-top');
   if (!btn) return;
@@ -1991,6 +1994,7 @@ function init() {
     initRsvp();
     initWhatsApp();
     initBackToTop();
+    initSmoothAnchorScroll();
 
     // Observe after dynamic content is rendered
     requestAnimationFrame(() => {

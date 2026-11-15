@@ -83,14 +83,11 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   font-size: 16px;
   overflow-x: hidden;
-  background-color: var(--clr-cream);
-}
-
-html.is-auto-scrolling {
-  scroll-behavior: auto !important;
+  background-color: #0D0202;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -367,17 +364,18 @@ ul { list-style: none; }
 
 
 /* ============================================================
-   SCROLL REVEAL ANIMATIONS
+   SCROLL REVEAL ANIMATIONS (Smooth GPU-accelerated)
    ============================================================ */
 .reveal-fade, .reveal-left, .reveal-right, .reveal-scale {
   opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(16px);
+  transition: opacity 0.45s ease-out, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
-.reveal-fade { transform: translateY(30px); }
-.reveal-left { transform: translateX(-40px); }
-.reveal-right { transform: translateX(40px); }
-.reveal-scale { transform: scale(0.92); }
+.reveal-scale {
+  transform: translateY(16px) scale(0.97);
+}
 
 .reveal-fade.is-visible,
 .reveal-left.is-visible,
